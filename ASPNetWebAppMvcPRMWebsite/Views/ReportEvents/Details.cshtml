@@ -1,0 +1,50 @@
+﻿@model ASP.NETCorePRMWebsite.Models.ReportEvent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReportEvent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportEventId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportEventId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApartmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApartmentId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RE_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

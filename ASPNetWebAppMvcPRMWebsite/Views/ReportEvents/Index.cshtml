@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ASP.NETCorePRMWebsite.Models.ReportEvent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ReportEventId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApartmentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportEventId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApartmentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RE_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RE_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RE_Id })
+        </td>
+    </tr>
+}
+
+</table>
