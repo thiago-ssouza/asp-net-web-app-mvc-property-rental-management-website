@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ASP.NETCorePRMWebsite.Models.Message>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApartmentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MessageText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenantId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SentBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApartmentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenantId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SentBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.M_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.M_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.M_Id })
+        </td>
+    </tr>
+}
+
+</table>
